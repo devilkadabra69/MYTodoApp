@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.todoapp.Fragments.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_add2"
+            app:destination="@id/add2" />
+        <action
+            android:id="@+id/action_listFragment_to_viewnoteFragment"
+            app:destination="@id/viewnoteFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_editUpdateFragment"
+            app:destination="@id/editUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.todoapp.Fragments.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_add2_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewnoteFragment"
+        android:name="com.example.todoapp.Fragments.ViewFragment"
+        android:label="View"
+        tools:layout="@layout/fragment_view" >
+        <action
+            android:id="@+id/action_viewnoteFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentTodo"
+            app:argType="com.example.todoapp.RoomDB.Todo_Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUpdateFragment"
+        android:name="com.example.todoapp.Fragments.EditUpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_edit_update" >
+        <action
+            android:id="@+id/action_editUpdateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.todoapp.RoomDB.Todo_Note" />
+    </fragment>
+</navigation>

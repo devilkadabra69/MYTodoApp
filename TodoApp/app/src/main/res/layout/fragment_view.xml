@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ViewFragment">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_viewfragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:elevation="25sp"
+        app:cardCornerRadius="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearlayout_addFragment"
+            >
+            <TextView
+                android:id="@+id/title_viewfragment"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntu"
+                android:background="@drawable/titlebackground"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:hint="Title..."
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/note_viewfragment"
+                android:textAlignment="center"
+                android:scrollbars="vertical"
+                android:fontFamily="@font/ubuntu"
+                android:hint="Type..."
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:padding="10dp"
+                android:background="@drawable/notebackground"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
